@@ -1,5 +1,4 @@
 #pragma once
-
 #include <map>
 #include "FuzzySet.h"
 
@@ -8,12 +7,13 @@ using namespace std;
 class LinguisticVariable
 {
 public:
-	LinguisticVariable(string &name);
-	LinguisticVariable(string &name, map<string, FuzzySet> &valueNameToFuzzySetMapping);
-	void addValueWithFuzzySet(const string &valueName, const FuzzySet &fuzzySet);
-	map<string, double> fuzzify(double input);
+	LinguisticVariable(string name);
+	LinguisticVariable(string name, map<string, FuzzySet> &labelToFuzzySetMapping);
 	~LinguisticVariable();
-	map<string, FuzzySet> valueNameToFuzzySetMapping;
+	void addLabelWithFuzzySet(const string &valueName, const FuzzySet &fuzzySet);
+	map<string, double> fuzzify(double input);
+private:
+	map<string, FuzzySet> labelToFuzzySetMapping;
 	string name;
 };
 

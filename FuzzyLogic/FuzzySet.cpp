@@ -1,5 +1,7 @@
 #include "FuzzySet.h"
 
+FuzzySet::FuzzySet() {}
+
 FuzzySet::FuzzySet(const double membershipFunction[4])
 {
 	for (unsigned int i = 0; i < 4; i++)
@@ -7,7 +9,6 @@ FuzzySet::FuzzySet(const double membershipFunction[4])
 		this->membershipFunction[i] = membershipFunction[i];
 	}
 }
-
 
 FuzzySet::~FuzzySet()
 = default;
