@@ -21,12 +21,24 @@
     <ClInclude Include="LinguisticVariable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RuleBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzySet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LinguisticVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
