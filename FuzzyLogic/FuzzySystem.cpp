@@ -75,5 +75,4 @@ void FuzzySystem::processRules(vector<map<string, double>> fuzzifiedInputs)
 
 	this->ruleBase.formatLingValuesAsRules(ruleBaseInputLabels, ruleBaseInputValues);
 	this->ruleBase.computeFiringStrengths();
-	//this->ruleBase.printFiringStrenghts();
 }
