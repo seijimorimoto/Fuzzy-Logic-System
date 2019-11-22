@@ -19,7 +19,31 @@ vector<double> FuzzySystem::execute(vector<double>& inputs)
 
 vector<double> FuzzySystem::defuzzify()
 {
-	return vector<double>();
+	vector<double> defuzzifiedOutputs(this->outputVars.size(), 0);
+	auto rulesAntecedents = this->ruleBase.getAllRulesAntecedents();
+	double firingStrengthAccum = 0;
+	for (unsigned int i = 0; i < rulesAntecedents.size(); i++)
+	{
+		auto firingStrength = this->ruleBase.getFiringStrength(rulesAntecedents[i]);
+		if (firingStrength != 0)
+		{
+			firingStrengthAccum += firingStrength;
+			auto ruleConsequent = this->ruleBase.getConsequent(rulesAntecedents[i]);
+			for (unsigned int j = 0; j < ruleConsequent.size(); j++)
+			{
+				auto outputLabel = ruleConsequent[j];
+				auto centerOfSet = this->outputVars[j].getCenterOfSet(outputLabel);
+				defuzzifiedOutputs[j] += centerOfSet * firingStrength;
+			}
+		}
+	}
+
+	for (unsigned int i = 0; i < defuzzifiedOutputs.size(); i++)
+	{
+		defuzzifiedOutputs[i] /= firingStrengthAccum;
+	}
+
+	return defuzzifiedOutputs;
 }
 
 vector<map<string, double>> FuzzySystem::fuzzify(vector<double>& inputs)
@@ -51,5 +75,5 @@ void FuzzySystem::processRules(vector<map<string, double>> fuzzifiedInputs)
 
 	this->ruleBase.formatLingValuesAsRules(ruleBaseInputLabels, ruleBaseInputValues);
 	this->ruleBase.computeFiringStrengths();
-	this->ruleBase.printFiringStrenghts();
+	//this->ruleBase.printFiringStrenghts();
 }

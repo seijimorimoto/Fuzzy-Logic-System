@@ -42,6 +42,27 @@ void RuleBase::formatLingValuesAsRules(vector<vector<string>>& linguisticLabels,
 	}
 }
 
+vector<vector<string>> RuleBase::getAllRulesAntecedents()
+{
+	vector<vector<string>> antecedents;
+	for (auto it = this->rules.begin(); it != this->rules.end(); ++it)
+	{
+		antecedents.push_back(it->first);
+	}
+	return antecedents;
+}
+
+vector<string> RuleBase::getConsequent(vector<string>& antecedent)
+{
+	return this->rules[antecedent];
+}
+
+
+double RuleBase::getFiringStrength(vector<string>& antecedent)
+{
+	return this->firingStrengths[antecedent];
+}
+
 void RuleBase::printFiringStrenghts()
 {
 	cout << "--------------------FIRING STRENGTHS--------------------" << endl;
@@ -54,4 +75,9 @@ void RuleBase::printFiringStrenghts()
 		}
 		cout << ": " << it->second << endl;
 	}
+}
+
+unsigned int RuleBase::size()
+{
+	return this->rules.size();
 }
