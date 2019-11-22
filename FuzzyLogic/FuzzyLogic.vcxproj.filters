@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Examples">
+      <UniqueIdentifier>{be19dd1f-0520-4c2b-a0b6-a6a7c1c89755}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FuzzySet.h">
@@ -28,6 +31,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FuzzySystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Examples.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -46,6 +52,12 @@
     </ClCompile>
     <ClCompile Include="FuzzySystem.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzySystemExample.cpp">
+      <Filter>Source Files\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="WallFollowObstacleAvoidRobot.cpp">
+      <Filter>Source Files\Examples</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

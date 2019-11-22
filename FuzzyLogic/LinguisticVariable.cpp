@@ -1,13 +1,11 @@
 #include "LinguisticVariable.h"
 
-LinguisticVariable::LinguisticVariable(string name)
+LinguisticVariable::LinguisticVariable()
 {
-	this->name = name;
 }
 
-LinguisticVariable::LinguisticVariable(string name, map<string, FuzzySet> &labelToFuzzySetMapping)
+LinguisticVariable::LinguisticVariable(map<string, FuzzySet> &labelToFuzzySetMapping)
 {
-	this->name = name;
 	this->labelToFuzzySetMapping = labelToFuzzySetMapping;
 }
 
