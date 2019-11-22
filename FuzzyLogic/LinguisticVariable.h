@@ -12,6 +12,7 @@ public:
 	~LinguisticVariable();
 	void addLabelWithFuzzySet(const string &valueName, const FuzzySet &fuzzySet);
 	map<string, double> fuzzify(double input);
+	double getCenterOfSet(string &fuzzySetName);
 private:
 	map<string, FuzzySet> labelToFuzzySetMapping;
 	string name;

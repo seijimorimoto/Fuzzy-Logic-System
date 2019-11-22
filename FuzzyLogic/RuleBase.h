@@ -12,7 +12,11 @@ public:
 	void addRule(vector<string> inputLingLabels, vector<string> outputLingLabels);
 	void computeFiringStrengths();
 	void formatLingValuesAsRules(vector<vector<string>> &linguisticLabels, vector<vector<double>> &values);
+	vector<vector<string>> getAllRulesAntecedents();
+	vector<string> getConsequent(vector<string> &antecedent);
+	double getFiringStrength(vector<string> &antecedent);
 	void printFiringStrenghts();
+	unsigned int size();
 private:
 	map<vector<string>, double> firingStrengths;
 	map<vector<string>, vector<string>> rules;

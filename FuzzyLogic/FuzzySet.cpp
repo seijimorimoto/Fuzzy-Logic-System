@@ -23,3 +23,8 @@ double FuzzySet::computeMembershipValue(double input)
 		return (input - membershipFunction[0]) / (membershipFunction[1] - membershipFunction[0]);
 	return (membershipFunction[3] - input) / (membershipFunction[3] - membershipFunction[2]);
 }
+
+double FuzzySet::getCenter()
+{
+	return (this->membershipFunction[1] + this->membershipFunction[2]) / 2;
+}

@@ -29,3 +29,8 @@ map<string, double> LinguisticVariable::fuzzify(double input)
 	}
 	return linguisticLabelsToValues;
 }
+
+double LinguisticVariable::getCenterOfSet(string & fuzzySetName)
+{
+	return this->labelToFuzzySetMapping[fuzzySetName].getCenter();
+}
