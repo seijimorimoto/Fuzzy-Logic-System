@@ -71,17 +71,17 @@ namespace WallFollowObstacleAvoidRobot
 
 	FuzzySystem generateFuzzySystem()
 	{
-		double rightFrontLow[] = { 0, 0, 300, 500 };
-		double rightFrontMed[] = { 300, 500, 500, 800 };
-		double rightFrontHigh[] = { 500, 800, 7000, 7000 };
-		double rightBackLow[] = { 0, 0, 300, 500 };
-		double rightBackMed[] = { 300, 500, 500, 800 };
-		double rightBackHigh[] = { 500, 800, 7000, 7000 };
+		double rightFrontLow[] = { 0, 0, 500, 700 };
+		double rightFrontMed[] = { 600, 800, 800, 1000 };
+		double rightFrontHigh[] = { 900, 1100, 7000, 7000 };
+		double rightBackLow[] = { 0, 0, 500, 700 };
+		double rightBackMed[] = { 600, 800, 800, 1000 };
+		double rightBackHigh[] = { 900, 1100, 7000, 7000 };
 
 		double leftVelLow[] = { 90, 100, 110, 120 };
 		double leftVelMed[] = { 110, 130, 150, 170 };
 		double leftVelHigh[] = { 160, 180, 200, 220 };
-		double rightVelLow[] = { 90, 120, 120, 150 };
+		double rightVelLow[] = { 90, 100, 110, 120 };
 		double rightVelMed[] = { 110, 130, 150, 170 };
 		double rightVelHigh[] = { 160, 180, 200, 220 };
 
@@ -112,15 +112,15 @@ namespace WallFollowObstacleAvoidRobot
 		LinguisticVariable rightVel(rightVelMapping);
 
 		RuleBase ruleBase(map<vector<string>, vector<string>> {
-			{ vector<string>{ "Low", "Low" }, vector<string>{ "Low", "Med" } },
+			{ vector<string>{ "Low", "Low" }, vector<string>{ "Low", "High" } },
 			{ vector<string>{ "Low", "Med" }, vector<string>{ "Med", "High" } },
 			{ vector<string>{ "Low", "High" }, vector<string>{ "Low", "High" } },
 			{ vector<string>{ "Med", "Low" }, vector<string>{ "Med", "Low" } },
 			{ vector<string>{ "Med", "Med" }, vector<string>{ "Med", "Med" } },
 			{ vector<string>{ "Med", "High" }, vector<string>{ "Med", "High" } },
 			{ vector<string>{ "High", "Low" }, vector<string>{ "High", "Low" } },
-			{ vector<string>{ "High", "Med" }, vector<string>{ "High", "Med" } }, // High Med
-			{ vector<string>{ "High", "High" }, vector<string>{ "High", "Low" } }, // High Low
+			{ vector<string>{ "High", "Med" }, vector<string>{ "High", "Med" } },
+			{ vector<string>{ "High", "High" }, vector<string>{ "High", "Low" } },
 		});
 
 		vector<LinguisticVariable> inputVars{ rightFront, rightBack };

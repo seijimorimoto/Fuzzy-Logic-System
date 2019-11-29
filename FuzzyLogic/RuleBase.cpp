@@ -34,6 +34,7 @@ void RuleBase::computeFiringStrengths()
 
 void RuleBase::formatLingValuesAsRules(vector<vector<string>>& linguisticLabels, vector<vector<double>>& values)
 {
+	this->rulesInputValues.clear();
 	for (unsigned int i = 0; i < linguisticLabels.size(); i++)
 	{
 		auto ruleLabels = linguisticLabels[i];
