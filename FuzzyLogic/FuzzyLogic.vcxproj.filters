@@ -59,5 +59,8 @@
     <ClCompile Include="WallFollowObstacleAvoidRobot.cpp">
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
+    <ClCompile Include="ObstacleAvoidRobot.cpp">
+      <Filter>Source Files\Examples</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

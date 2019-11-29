@@ -162,6 +162,7 @@
     <ClCompile Include="FuzzySystemExample.cpp" />
     <ClCompile Include="LinguisticVariable.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ObstacleAvoidRobot.cpp" />
     <ClCompile Include="RuleBase.cpp" />
     <ClCompile Include="WallFollowObstacleAvoidRobot.cpp" />
   </ItemGroup>
