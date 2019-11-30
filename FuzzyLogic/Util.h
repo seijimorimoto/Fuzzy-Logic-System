@@ -13,11 +13,18 @@ public:
 	static vector<T> getKeysFromMap(map<T, K> mapIn);
 	template <typename T, typename K>
 	static vector<K> getValuesFromMap(map<T, K> mapIn);
+
 private:
 	template <typename T>
 	static void getCombinations(vector<vector<T>> &inputs, vector<vector<T>> &combinations, vector<T> &currentComb, unsigned int index);
 };
 
+// Gets all the combinations of elements of different sets.
+// Params:
+// - inputs: A vector in which each position corresponds to a set of elements (represented as a
+// vector itself).
+// Returns: A vector in which each position represents a different combination of elements from the
+// different sets in the 'inputs' parameter.
 template<typename T>
 static inline vector<vector<T>> Util::getCombinations(vector<vector<T>>& inputs)
 {
@@ -27,6 +34,17 @@ static inline vector<vector<T>> Util::getCombinations(vector<vector<T>>& inputs)
 	return combinations;
 }
 
+// Recursively updates a vector so that it holds all the combinations of elements from different
+// sets.
+// Params:
+// - inputs: A vector in which each position corresponds to a set of elements (represented as a
+// vector itself).
+// - combinations: Vector where all the combinations of elements from the different sets in the
+// 'inputs' parameter will be stored when the recursion ends.
+// - currentComb: Vector with the current combination of elements from the different sets in the
+// 'inputs' parameter that is being formed as the recursion goes.
+// - index: Position (that identifies a set of elements) within the 'inputs' parameter that is
+// going to be explored in this instance of the recursive calls.
 template<typename T>
 static inline void Util::getCombinations(vector<vector<T>>& inputs, vector<vector<T>>& combinations, vector<T>& currentComb, unsigned int index)
 {
@@ -45,6 +63,10 @@ static inline void Util::getCombinations(vector<vector<T>>& inputs, vector<vecto
 	}
 }
 
+// Gets all the keys from a standard C++ map.
+// Params:
+// - mapIn: map from which to get all its keys.
+// Returns: A vector containing all the keys from the given map.
 template <typename T, typename K>
 static inline vector<T> Util::getKeysFromMap(map<T, K> mapIn)
 {
@@ -56,6 +78,10 @@ static inline vector<T> Util::getKeysFromMap(map<T, K> mapIn)
 	return keys;
 }
 
+// Gets all the values from a standard C++ map.
+// Params:
+// - mapIn: map from which to get all its values.
+// Returns: A vector containing all the values from the given map.
 template <typename T, typename K>
 static inline vector<K> Util::getValuesFromMap(map<T, K> mapIn)
 {

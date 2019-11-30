@@ -15,8 +15,9 @@ public:
 	vector<vector<string>> getAllRulesAntecedents();
 	vector<string> getConsequent(vector<string> &antecedent);
 	double getFiringStrength(vector<string> &antecedent);
-	void printFiringStrenghts();
+	void printFiringStrengths();
 	unsigned int size();
+
 private:
 	map<vector<string>, double> firingStrengths;
 	map<vector<string>, vector<string>> rules;
