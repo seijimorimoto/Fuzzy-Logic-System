@@ -8,6 +8,7 @@ public:
 	~FuzzySet();
 	double computeMembershipValue(double input);
 	double getCenter();
+
 private:
 	double membershipFunction[4]{};
 };
