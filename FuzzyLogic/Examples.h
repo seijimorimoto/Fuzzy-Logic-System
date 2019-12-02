@@ -15,6 +15,11 @@ namespace ObstacleAvoid
 	int main(int argc, char * argv[]);
 }
 
+namespace WallFollowObstacleAvoidSubsumption
+{
+	int main(int argc, char * argv[]);
+}
+
 namespace WallFollowObstacleAvoidContextBlending
 {
 	int main(int argc, char * argv[]);

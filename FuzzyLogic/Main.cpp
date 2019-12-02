@@ -19,6 +19,9 @@ int main(int argc, char * argv[])
 	if (argc == 2 && argument == "WallFollow")
 		return WallFollow::main(argc, argv);
 
+	if (argc == 2 && argument == "WallFollowObstacleAvoidSubsumption")
+		return WallFollowObstacleAvoidSubsumption::main(argc, argv);
+
 	if (argc == 2 && argument == "WallFollowObstacleAvoidContextBlending")
 		return WallFollowObstacleAvoidContextBlending::main(argc, argv);
 }

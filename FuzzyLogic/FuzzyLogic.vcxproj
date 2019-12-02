@@ -175,6 +175,7 @@
     <ClCompile Include="WallFollowFuzzySystem.cpp" />
     <ClCompile Include="WallFollowObstacleAvoidContextBlending.cpp" />
     <ClCompile Include="WallFollow.cpp" />
+    <ClCompile Include="WallFollowObstacleAvoidSubsumption.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
