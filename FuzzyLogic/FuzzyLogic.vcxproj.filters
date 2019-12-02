@@ -16,6 +16,12 @@
     <Filter Include="Source Files\Examples">
       <UniqueIdentifier>{be19dd1f-0520-4c2b-a0b6-a6a7c1c89755}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\FuzzySystems">
+      <UniqueIdentifier>{472de192-29b9-45cc-b97b-9529e2dee834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FuzzySystems">
+      <UniqueIdentifier>{e96108b0-ee14-491d-a8da-2a4d140192fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FuzzySet.h">
@@ -35,6 +41,15 @@
     </ClInclude>
     <ClInclude Include="Examples.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HierarchicalFuzzySystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObstacleAvoidFuzzySystem.h">
+      <Filter>Header Files\FuzzySystems</Filter>
+    </ClInclude>
+    <ClInclude Include="WallFollowFuzzySystem.h">
+      <Filter>Header Files\FuzzySystems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -56,10 +71,22 @@
     <ClCompile Include="FuzzySystemExample.cpp">
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
-    <ClCompile Include="WallFollowObstacleAvoidRobot.cpp">
+    <ClCompile Include="WallFollowObstacleAvoidContextBlending.cpp">
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
-    <ClCompile Include="ObstacleAvoidRobot.cpp">
+    <ClCompile Include="HierarchicalFuzzySystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObstacleAvoidFuzzySystem.cpp">
+      <Filter>Source Files\FuzzySystems</Filter>
+    </ClCompile>
+    <ClCompile Include="WallFollowFuzzySystem.cpp">
+      <Filter>Source Files\FuzzySystems</Filter>
+    </ClCompile>
+    <ClCompile Include="WallFollow.cpp">
+      <Filter>Source Files\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="ObstacleAvoid.cpp">
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
   </ItemGroup>

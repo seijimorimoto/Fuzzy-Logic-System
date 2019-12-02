@@ -155,19 +155,26 @@
     <ClInclude Include="Examples.h" />
     <ClInclude Include="FuzzySet.h" />
     <ClInclude Include="FuzzySystem.h" />
+    <ClInclude Include="HierarchicalFuzzySystem.h" />
     <ClInclude Include="LinguisticVariable.h" />
+    <ClInclude Include="ObstacleAvoidFuzzySystem.h" />
     <ClInclude Include="RuleBase.h" />
     <ClInclude Include="Util.h" />
+    <ClInclude Include="WallFollowFuzzySystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzySet.cpp" />
     <ClCompile Include="FuzzySystem.cpp" />
     <ClCompile Include="FuzzySystemExample.cpp" />
+    <ClCompile Include="HierarchicalFuzzySystem.cpp" />
     <ClCompile Include="LinguisticVariable.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="ObstacleAvoidRobot.cpp" />
+    <ClCompile Include="ObstacleAvoidFuzzySystem.cpp" />
+    <ClCompile Include="ObstacleAvoid.cpp" />
     <ClCompile Include="RuleBase.cpp" />
-    <ClCompile Include="WallFollowObstacleAvoidRobot.cpp" />
+    <ClCompile Include="WallFollowFuzzySystem.cpp" />
+    <ClCompile Include="WallFollowObstacleAvoidContextBlending.cpp" />
+    <ClCompile Include="WallFollow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

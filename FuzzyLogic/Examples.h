@@ -5,12 +5,17 @@ namespace FuzzySystemExample
 	int main();
 }
 
-namespace WallFollowObstacleAvoidRobot
+namespace WallFollow
 {
 	int main(int argc, char * argv[]);
 }
 
-namespace ObstacleAvoidRobot
+namespace ObstacleAvoid
+{
+	int main(int argc, char * argv[]);
+}
+
+namespace WallFollowObstacleAvoidContextBlending
 {
 	int main(int argc, char * argv[]);
 }
