@@ -89,5 +89,8 @@
     <ClCompile Include="ObstacleAvoid.cpp">
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
+    <ClCompile Include="WallFollowObstacleAvoidSubsumption.cpp">
+      <Filter>Source Files\Examples</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
