@@ -1,0 +1,81 @@
+[System]
+Name='ObstacleAvoid'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='FrontLeft'
+Range=[0 1400]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 500 600]
+MF2='Med':'trapmf',[500 600 800 900]
+MF3='High':'trapmf',[800 900 1400 1400]
+
+[Input2]
+Name='FrontCenter'
+Range=[0 1400]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 500 600]
+MF2='Med':'trapmf',[500 600 800 900]
+MF3='High':'trapmf',[800 900 1400 1400]
+
+[Input3]
+Name='FrontRight'
+Range=[0 1400]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 500 600]
+MF2='Med':'trapmf',[500 600 800 900]
+MF3='High':'trapmf',[800 900 1400 1400]
+
+[Output1]
+Name='LeftVel'
+Range=[0 390]
+NumMFs=3
+MF1='Low':'trapmf',[10 30 40 60]
+MF2='Med':'trapmf',[60 80 120 140]
+MF3='High':'trapmf',[140 160 360 380]
+
+[Output2]
+Name='RightVel'
+Range=[0 390]
+NumMFs=3
+MF1='Low':'trapmf',[10 30 40 60]
+MF2='Med':'trapmf',[60 80 120 140]
+MF3='High':'trapmf',[140 160 360 380]
+
+[Rules]
+1 1 1, 1 3 (1) : 1
+1 1 2, 2 1 (1) : 1
+1 1 3, 3 1 (1) : 1
+1 2 1, 2 2 (1) : 1
+1 2 2, 3 2 (1) : 1
+1 3 1, 2 2 (1) : 1
+1 3 2, 2 2 (1) : 1
+2 1 1, 1 3 (1) : 1
+2 1 2, 1 3 (1) : 1
+2 1 2, 3 1 (1) : 1
+2 2 1, 1 2 (1) : 1
+2 2 2, 2 2 (1) : 1
+2 2 3, 3 2 (1) : 1
+2 3 1, 2 2 (1) : 1
+2 3 2, 2 2 (1) : 1
+2 3 3, 3 2 (1) : 1
+3 1 1, 1 3 (1) : 1
+3 1 2, 1 3 (1) : 1
+3 1 3, 1 3 (1) : 1
+3 2 1, 1 3 (1) : 1
+3 2 2, 1 2 (1) : 1
+3 2 3, 1 2 (1) : 1
+3 3 1, 1 3 (1) : 1
+3 3 2, 2 3 (1) : 1
+3 3 3, 2 2 (1) : 1
+1 2 3, 3 1 (1) : 1
+1 3 3, 3 2 (1) : 1

@@ -1,0 +1,55 @@
+[System]
+Name='WallFollow'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='RightFront'
+Range=[0 1000]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 250 350]
+MF2='Med':'trapmf',[250 350 500 600]
+MF3='High':'trapmf',[500 600 1000 1000]
+
+[Input2]
+Name='RightBack'
+Range=[0 1000]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 250 350]
+MF2='Med':'trapmf',[250 350 500 600]
+MF3='High':'trapmf',[500 600 1000 1000]
+
+[Output1]
+Name='LeftVel'
+Range=[0 200]
+NumMFs=3
+MF1='Low':'trapmf',[20 40 60 80]
+MF2='Med':'trapmf',[60 80 140 160]
+MF3='High':'trapmf',[140 160 180 200]
+
+[Output2]
+Name='RightVel'
+Range=[0 200]
+NumMFs=3
+MF1='Low':'trapmf',[20 40 60 80]
+MF2='Med':'trapmf',[60 80 140 160]
+MF3='High':'trapmf',[140 160 180 200]
+
+[Rules]
+1 1, 1 3 (1) : 1
+1 2, 2 3 (1) : 1
+1 3, 1 3 (1) : 1
+2 1, 2 1 (1) : 1
+2 2, 2 2 (1) : 1
+2 3, 2 3 (1) : 1
+3 1, 2 3 (1) : 1
+3 2, 2 1 (1) : 1
+3 3, 3 1 (1) : 1

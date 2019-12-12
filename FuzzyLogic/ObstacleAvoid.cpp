@@ -10,6 +10,8 @@ namespace ObstacleAvoid
 {
 	int main(int argc, char * argv[])
 	{
+		cout << "OBSTACLE AVOIDANCE EXAMPLE" << endl;
+		
 		// Create instances.
 		Aria::init();
 		ArRobot robot;

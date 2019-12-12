@@ -13,11 +13,11 @@ FuzzySystem WallFollowFuzzySystem::generateFuzzySystem()
 	double rightBackMed[] = { 250, 350, 500, 600 };
 	double rightBackHigh[] = { 500, 600, 7000, 7000 };
 
-	double leftVelLow[] = { 10, 30, 40, 60 };
-	double leftVelMed[] = { 60, 100, 140, 180 };
+	double leftVelLow[] = { 20, 40, 60, 80 };
+	double leftVelMed[] = { 60, 80, 140, 160 };
 	double leftVelHigh[] = { 140, 160, 180, 200 };
-	double rightVelLow[] = { 10, 30, 40, 60 };
-	double rightVelMed[] = { 60, 100, 140, 180 };
+	double rightVelLow[] = { 20, 40, 60, 80 };
+	double rightVelMed[] = { 60, 80, 140, 160 };
 	double rightVelHigh[] = { 140, 160, 180, 200 };
 
 	map<string, FuzzySet> rightFrontMapping = {

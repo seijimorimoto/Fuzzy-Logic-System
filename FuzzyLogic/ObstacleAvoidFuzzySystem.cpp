@@ -60,7 +60,7 @@ FuzzySystem ObstacleAvoidFuzzySystem::generateFuzzySystem()
 		{ vector<string>{ "Low", "Low", "Med" }, vector<string>{ "Med", "Low" } },
 		{ vector<string>{ "Low", "Low", "High" }, vector<string>{ "High", "Low" } },
 		{ vector<string>{ "Low", "Med", "Low" }, vector<string>{ "Med", "Med" } },
-		{ vector<string>{ "Low", "Med", "Med" }, vector<string>{ "High", "Med" } }, // med low
+		{ vector<string>{ "Low", "Med", "Med" }, vector<string>{ "High", "Med" } },
 		{ vector<string>{ "Low", "Med", "High" }, vector<string>{ "High", "Low" } },
 		{ vector<string>{ "Low", "High", "Low" }, vector<string>{ "Med", "Med" } },
 		{ vector<string>{ "Low", "High", "Med" }, vector<string>{ "Med", "Med" } },
