@@ -16,6 +16,8 @@ namespace WallFollowObstacleAvoidContextBlending
 
 	int main(int argc, char * argv[])
 	{
+		cout << "CONTEXT BLENDING EXAMPLE" << endl;
+		
 		// Create instances.
 		Aria::init();
 		ArRobot robot;

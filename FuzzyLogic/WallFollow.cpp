@@ -12,6 +12,8 @@ namespace WallFollow
 {
 	int main(int argc, char * argv[])
 	{
+		cout << "WALL FOLLOWING EXAMPLE" << endl;
+		
 		// Create instances.
 		Aria::init();
 		ArRobot robot;
